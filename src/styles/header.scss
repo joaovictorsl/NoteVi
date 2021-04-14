@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+nav{
+  background-color: #202020;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 100vw;
+}
+
+@media (min-width: 1024px){
+  .inandup{
+    display: flex !important;
+  }
+  .open, .signinmob, .signupmob{
+    display: none;
+  }
+}
+.notevi{
+  color: #7BED0A;
+  font-size: 34px;
+  font-family: 'Rancho', cursive;
+}
+.notevi:hover{
+  cursor: pointer;
+}
+section{
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signin{
+  margin-right: 50px;
+  color: #7BED0A;
+  font-size: 24px;
+  font-family: 'Rancho', cursive;
+}
+.signinmob{
+  color: #7BED0A;
+  font-size: 24px;
+  font-family: 'Rancho', cursive;
+}
+.signup{
+  color: #7BED0A;
+  font-size: 24px;
+  font-family: 'Rancho', cursive;
+}
+.signupmob{
+  color: #7BED0A;
+  font-size: 24px;
+  font-family: 'Rancho', cursive;
+}
+.inandup{
+  display: none;
+  padding-right: 30px;
+}
+.signin:hover, .signup:hover{
+  color: white;
+  cursor: pointer;
+}
+.signinmob:hover, .signupmob:hover{
+  color: white;
+  cursor: pointer;
+}
+.open{
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+#inandupmob{
+  display: none;
+  background-color: #202020;
+  border-top: 1px solid black;
+}
+a{
+  text-decoration: none;
+}

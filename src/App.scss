@@ -1,0 +1,19 @@
+//Lida com sistema de acento português.
+@charset 'utf-8';
+//Importa funções do bulma para repassar as cores criadas.
+@import "~bulma/sass/utilities/functions";
+//Importa as cores customizadas criadas.
+@import "./styles/custom_colors.scss";
+
+//Associa cores e títulos e disponibiliza elas no projeto.
+$custom-colors: (
+  "custom-green": ($custom-green),
+  "custom-dark": ($custom-dark),
+  "custom-white": ($custom-white)
+);
+
+// Import Bulma styles
+@import "~bulma/bulma";
+
+// Import rbx style fixes
+@import "~rbx/rbx";

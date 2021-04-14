@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+.first{
+  font-family: 'Rancho', cursive;
+  font-size: 64px;
+  color: white;
+  line-height: 60px;
+}
+.except{
+  font-family: 'Poppins', cursive;
+  color: #7BED0A;
+  font-size: 45px;
+}
+.second{
+  color: white;
+}
+.text{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.img{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.imgmob{
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 50px;
+}
+.section{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  background-color: #8a2be2;
+}
+.register{
+  outline: none;
+  border: 3px solid #7BED0A;
+  border-radius: 15px;
+  height: 100px;
+  width: 68%;
+  margin-top: 50px;
+  font-family: 'Rancho', cursive;
+  font-size: 64px;
+  color: #7BED0A;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+.register:hover{
+  background-color: #7BED0A;
+  color: white;
+  transition: 250ms;
+  cursor: pointer;
+}
+@media (max-width: 1024px){
+  .section{
+    flex-direction: column;
+  }
+  .img{
+    display: none;
+  }
+  .imgmob{
+    display: flex;
+  }
+}
