@@ -1,9 +1,40 @@
 import React from 'react';
-
+import Header from '../../../components/header';
+import('../../../styles/register.scss')
 
 const register = () => {
   return (
-    <h1>Register</h1>
+    <body className='bodyregister'>
+      <Header />
+      <section className='sectionregister'>
+        <div className='divregister'>
+          <p className='pregister'>Create your account</p>
+          <div className='divformregister'>
+            <form className='formregister'>
+              <div class="field">
+                <label class="label labelregister">Name</label>
+                <div class="control">
+                  <input class="input inputregister" type="text" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label labelregister">Email</label>
+                <div class="control">
+                  <input class="input inputregister" type="text" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label labelregister">Password</label>
+                <div class="control">
+                  <input class="input inputregister" type="password" />
+                </div>
+              </div>
+              <button class="button buttonregister is-large">Create</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </body>
   )
 }
 export default register;

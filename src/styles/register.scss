@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+.bodyregister{
+  background-color: #8a2be2;
+}
+.sectionregister{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 92%;
+  width: 100vw;
+}
+.divregister{
+  width: 70vw;
+  margin-top: -1vh;
+  border-radius: 16px;
+  background-color: #202020;
+  text-align: center;
+  
+  display: flex;
+  flex-direction: column;
+}
+.divformregister{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.pregister{
+  font-family: 'Rancho', cursive;
+  font-size: 5vw;
+  color: #7BED0A;
+}
+.formregister{
+  text-align: start;
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+}
+.labelregister{
+  font-family: 'Rancho', cursive;
+  color: #7BED0A;
+}
+.buttonregister{
+  border: 1px solid #7BED0A;
+  background-color: transparent;
+  color: #7BED0A;
+  font-family: 'Rancho', cursive;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.buttonregister:hover{
+  background-color: #7BED0A;
+  color: white;
+  transition: 250ms;
+  cursor: pointer;
+}
+.inputregister{
+  background-color: transparent;
+  border: 1px solid #7BED0A;
+  outline: none;
+  color: white;
+}
+.inputregister:hover{
+  background-color: transparent;
+  border: 1px solid #7BED0A;
+}

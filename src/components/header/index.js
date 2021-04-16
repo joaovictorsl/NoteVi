@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <Fragment>
       <nav>
-        <section>
+        <section className='sectionheader'>
           <Link to='/'><span className='notevi'>NoteVi</span></Link>
           <div className='inandup'>
             <div>
