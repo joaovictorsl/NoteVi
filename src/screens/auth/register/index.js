@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import FormRegister from '../../../components/auth/register';
 import Header from '../../../components/header';
 import('../../../styles/register.scss')
 
 const register = () => {
   return (
-    <body className='bodyregister'>
+    <Fragment>
       <Header />
       <section className='sectionregister'>
         <div className='divregister'>
@@ -15,7 +15,7 @@ const register = () => {
           </div>
         </div>
       </section>
-    </body>
+    </Fragment>
   )
 }
 export default register;

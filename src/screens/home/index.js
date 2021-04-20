@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Iphone from '../../assets/images/iphone.png';
 import Header from '../../components/header';
@@ -6,7 +6,7 @@ import "../../styles/home.scss";
 
 const HomeScreen = () => {
   return (
-    <body>
+    <Fragment>
       <Header />
       <section className='section'>
         <div className='text'>
@@ -25,7 +25,7 @@ const HomeScreen = () => {
           <img src={Iphone} />
         </div>
       </section>
-    </body>
+    </Fragment>
   )
 }
 export default HomeScreen;

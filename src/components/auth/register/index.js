@@ -30,25 +30,25 @@ const Form = () => {
   return (
     <Fragment>
       <form className='formregister' onSubmit={handleSubmit}>
-        <div class="field">
-          <label class="label labelregister">Name</label>
-          <div class="control">
-            <input class="input inputregister" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+        <div className="field">
+          <label className="label labelregister">Name</label>
+          <div className="control">
+            <input className="input inputregister" type="text" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
         </div>
-        <div class="field">
-          <label class="label labelregister">Email</label>
-          <div class="control">
-            <input class="input inputregister" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <div className="field">
+          <label className="label labelregister">Email</label>
+          <div className="control">
+            <input className="input inputregister" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
         </div>
-        <div class="field">
-          <label class="label labelregister">Password</label>
-          <div class="control">
-            <input class="input inputregister" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <div className="field">
+          <label className="label labelregister">Password</label>
+          <div className="control">
+            <input className="input inputregister" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
         </div>
-        <button class="button buttonregister is-large" >Create</button>
+        <button className="button buttonregister is-large" >Create</button>
         {error && <Help color='danger'>Email or password invalid.</Help>}
       </form>
     </Fragment>

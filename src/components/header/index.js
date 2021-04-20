@@ -30,7 +30,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" onClick={onClick}>
+          <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" onClick={onClick}>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 nav{
   background-color: #202020;
   display: flex;
@@ -14,6 +15,11 @@ nav{
   .open, .signinmob, .signupmob{
     display: none;
   }
+}
+.username{
+  color: #7BED0A;
+  font-size: 18px;
+  font-family: 'Rancho', cursive;
 }
 .notevi{
   color: #7BED0A;
