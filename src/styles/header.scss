@@ -8,18 +8,38 @@ nav{
   width: 100vw;
 }
 
+.iconandbrand{
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+}
+
+.list-color{
+  color: #7BED0A;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
 @media (min-width: 1024px){
   .inandup{
     display: flex !important;
   }
-  .open, .signinmob, .signupmob{
+  .open, .signinmob, .signupmob, .usernamemob{
+    display: none;
+  }
+}
+@media (max-width: 1024px){
+  .username{
     display: none;
   }
 }
 .username{
   color: #7BED0A;
   font-size: 18px;
-  font-family: 'Rancho', cursive;
+}
+.usernamemob{
+  color: #7BED0A;
+  font-size: 18px;
 }
 .notevi{
   color: #7BED0A;

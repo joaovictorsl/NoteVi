@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import '../../styles/header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faList } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import UserService from '../../services/users';
 import Api from '../../services/api'
 
@@ -16,7 +16,7 @@ const onClick = (e) => {
   }
 }
 
-const Header = () => {
+const Header = (props) => {
 
   const [redirect, setRedirect] = useState(false)
 
@@ -35,7 +35,12 @@ const Header = () => {
     <Fragment>
       <nav>
         <section className='sectionheader'>
-          <Link to='/notes'><span className='notevi'>NoteVi</span></Link>
+          <div className='iconandbrand'>
+            <Link to='/notes'><span className='notevi'>NoteVi</span></Link>
+            <div onClick={() => props.setIsOpen(true)}>
+              <FontAwesomeIcon icon={faBars} size='2x' className='list-color' />
+            </div>
+          </div>
           <div>
             <span className='username'>{user.name}</span>
           </div>
@@ -58,6 +63,9 @@ const Header = () => {
         </section>
       </nav>
       <div id='inandupmob'>
+        <div>
+          <span className='usernamemob'>{user.name}</span>
+        </div>
         <div>
           <Link to='/users/edit'>
             <span className="signinmob">Options</span>
