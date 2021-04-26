@@ -1,6 +1,6 @@
 import { Help } from 'rbx';
 import React, { Fragment } from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import UserService from '../../../services/users'
 
@@ -16,7 +16,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const user = await UserService.register({ name: name, email: email, password: password })
+      await UserService.register({ name: name, email: email, password: password })
       setRedirect(true)
     } catch (error) {
       setError(true)

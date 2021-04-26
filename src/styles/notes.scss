@@ -11,3 +11,30 @@
   width: 20%;
   color: #7BED0A;
 }
+
+.card-sidebar{
+  background-color: #303030;
+  text-align: center;
+  margin: 10px auto 10px auto;
+  border-radius: 5px;
+}
+
+.selected-card{
+  background-color: #7BED0A;
+  color: #303030;
+}
+
+.card-sidebar:hover{
+  background-color: #7BED0A;
+  cursor: pointer;
+  color: #303030;
+  transition: 250ms;
+}
+
+.notesinput{
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #7BED0A;
+  background-color: transparent;
+  color: #7BED0A;
+}

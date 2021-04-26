@@ -17,12 +17,12 @@ const HomeScreen = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p><p>Aliquam ac leo volutpat, porta ipsum eu, finibus ipsum.</p><p>Praesent sit amet leo in massa luctus efficitur. Integer</p><p>feugiat et erat quis bibendum. Vestibulum convallis, tortor</p><p>vitae dignissim rutrum, enim ante sagittis dui, nec lacinia</p><p>lorem risus eu mi.</p>
           </p>
           <div className='imgmob'>
-            <img src={Iphone} />
+            <img src={Iphone} alt='Iphone' />
           </div>
           <Link to='/register' className='register'>Register</Link>
         </div>
         <div className='img'>
-          <img src={Iphone} />
+          <img src={Iphone} alt='Iphone' />
         </div>
       </section>
     </Fragment>

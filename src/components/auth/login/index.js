@@ -12,7 +12,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const user = await UserService.login({ email: email, password: password })
+      await UserService.login({ email: email, password: password })
       setRedirect(true)
     } catch (error) {
       setError(true)

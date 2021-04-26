@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import Header from '../../../components/header_logged';
 import Notes from '../../../components/notes';
-import UserService from '../../../services/users';
 
 
 const IndexNotes = () => {
