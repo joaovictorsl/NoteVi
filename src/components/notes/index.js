@@ -18,7 +18,20 @@ const Notes = (props) => {
     if (response.data.length >= 1) {
       setNotes(response.data.reverse())
       setCurrentNote(response.data[0])
+    } else {
+      setNotes([])
+      setCurrentNote({ title: "", body: "", id: "" })
     }
+  }
+
+  const createNote = async () => {
+    await NotesService.create();
+    fetchNotes();
+  }
+
+  const deleteNote = async (id) => {
+    await NotesService.delete(id);
+    fetchNotes();
   }
 
   const selectNote = (id) => {
@@ -36,13 +49,16 @@ const Notes = (props) => {
           onStateChange={(state) => props.setIsOpen(state.isOpen)}
           customBurgerIcon={false}
           customCrossIcon={false}
-          width={'20%'}>
+          width={'21%'}>
           <div className='organize-menu'>
             <ul>
               <li><p>Search</p> <input className='notesinput'></input></li>
               <li>
                 <p>Notes</p>
-                <ListNotes notes={notes} selectNote={selectNote} current_note={current_note} />
+                <div className='ListContainer'>
+                  <ListNotes notes={notes} selectNote={selectNote} deleteNote={deleteNote} current_note={current_note} />
+                </div>
+                <button className="newnotebtn" onClick={() => createNote()}>New note +</button>
               </li>
             </ul>
           </div>

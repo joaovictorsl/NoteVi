@@ -7,9 +7,29 @@
 .organize-menu{
   display: flex;
   text-align: center;
-  margin-left: -80%;
+  margin-left: -78.8%;
   width: 20%;
   color: #7BED0A;
+}
+
+.ListContainer{
+  height: 460px;
+  overflow-y:scroll ;
+  overflow-x: hidden;
+  margin-bottom: 10px;
+}
+
+.ListContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ListContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ListContainer::-webkit-scrollbar-thumb {
+  background-color: #7BED0A;
+  border-radius: 5px;
 }
 
 .card-sidebar{
@@ -25,9 +45,8 @@
 }
 
 .card-sidebar:hover{
-  background-color: #7BED0A;
+  background-color: #8a2be2;
   cursor: pointer;
-  color: #303030;
   transition: 250ms;
 }
 
@@ -37,4 +56,39 @@
   border: 1px solid #7BED0A;
   background-color: transparent;
   color: #7BED0A;
+}
+
+.newnotebtn{
+  background-color: transparent;
+  color: #7BED0A;
+  border: 1px solid #7BED0A;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.newnotebtn:hover{
+  background-color: #7BED0A;
+  color: #303030;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.deletenotebtn{
+  background-color: transparent;
+  color: #7BED0A;
+  border: 1px solid #7BED0A;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  width: 50%;
+}
+
+.deletenotebtn:hover{
+  background-color: #7BED0A;
+  color: #303030;
+  border-color: transparent !important;
+  cursor: pointer;
+  transition: 250ms;
 }
