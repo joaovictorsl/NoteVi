@@ -3,6 +3,8 @@
 
 .wholescreennotes{
   height: calc(100% - 50px);
+  color: black;
+  background-color: white;
 }
 .organize-menu{
   display: flex;
@@ -10,6 +12,14 @@
   margin-left: -78.8%;
   width: 20%;
   color: #7BED0A;
+}
+
+.notes-editor{
+  padding: 0;
+  height: calc(100%-50px);
+  .quill{
+    height: 100%;
+  }
 }
 
 .ListContainer{

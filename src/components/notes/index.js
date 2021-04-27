@@ -3,6 +3,7 @@ import '../../styles/notes.scss';
 import { slide as Menu } from 'react-burger-menu';
 import ListNotes from './list';
 import NotesService from '../../services/notes';
+import Editor from '../notes/editor'
 
 const Notes = (props) => {
 
@@ -63,6 +64,7 @@ const Notes = (props) => {
             </ul>
           </div>
         </Menu>
+        <Editor note={current_note} />
       </div>
     </Fragment>
   )
