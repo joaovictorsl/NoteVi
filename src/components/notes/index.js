@@ -3,7 +3,8 @@ import '../../styles/notes.scss';
 import { slide as Menu } from 'react-burger-menu';
 import ListNotes from './list';
 import NotesService from '../../services/notes';
-import Editor from '../notes/editor'
+import Editor from '../notes/editor';
+import Search from '../notes/search';
 
 const Notes = (props) => {
 
@@ -35,6 +36,20 @@ const Notes = (props) => {
     fetchNotes();
   }
 
+  const updateNote = async (oldNote, params) => {
+    const updatedNote = await NotesService.update(oldNote._id, params);
+    const index = notes.indexOf(oldNote);
+    const newNotes = notes;
+    newNotes[index] = updatedNote.data;
+    setNotes(newNotes);
+    setCurrentNote(updatedNote.data);
+  }
+
+  const searchNote = async (query) => {
+    const res = await NotesService.search(query);
+    setNotes(res.data);
+  }
+
   const selectNote = (id) => {
     const note = notes.find((note) => {
       return note._id == id
@@ -53,7 +68,9 @@ const Notes = (props) => {
           width={'21%'}>
           <div className='organize-menu'>
             <ul>
-              <li><p>Search</p> <input className='notesinput'></input></li>
+              <li>
+                <Search searchNotes={searchNote} fetchNotes={fetchNotes} />
+              </li>
               <li>
                 <p>Notes</p>
                 <div className='ListContainer'>
@@ -64,9 +81,9 @@ const Notes = (props) => {
             </ul>
           </div>
         </Menu>
-        <Editor note={current_note} />
+        <Editor note={current_note} updateNote={updateNote} />
       </div>
-    </Fragment>
+    </Fragment >
   )
 }
 
