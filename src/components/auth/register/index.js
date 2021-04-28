@@ -39,7 +39,7 @@ const Form = () => {
         <div className="field">
           <label className="label labelregister">Email</label>
           <div className="control">
-            <input className="input inputregister" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input className="input inputregister" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           </div>
         </div>
         <div className="field">

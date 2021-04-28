@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+.editbody{
+  background-color: #8a2be2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cardedit{
+  background-color: #303030;
+  width: 70vw;
+  margin: 20px auto 20px auto;
+}
+.contentedit{
+  display: flex;
+  margin: 15px auto 15px auto;
+}
+
+.passwordWarning{
+  color: #ed370a;
+}
+.workedInfo{
+  color: #7BED0A;
+}
+.passwordWork{
+  color: #7BED0A;
+}
+
+.hidetime{
+  display: none;
+}
+
+// .warndisplay{
+//   display:;
+// }
+
+.contenteditfirst{
+  margin-top: -15px !important;
+}
+
+.pedit{
+  font-family: 'Rancho', cursive;
+  font-size: 3vw;
+  color: #7BED0A;
+  justify-self: center;
+}
+
+.editaligncenter{
+  text-align: center;
+}
+
+.editinput{
+  background-color: transparent;
+  border-color: #7BED0A;
+  color: white;
+  margin-right: 10px;
+}
+
+.editinput:hover{
+  border-color: #7BED0A;
+}
+
+.editinput:focus{
+  outline: none;
+  border-color: #7BED0A;
+}
+
+.editinput::placeholder{
+  color: white;
+}
+
+.buttonedit{
+  color: #7BED0A;
+  border-color: #7BED0A;
+  background-color: transparent;
+}
+
+.buttonedit:hover{
+  background-color: #7BED0A;
+  border-color: #7BED0A;
+  color: #303030;
+}
+
+.buttonedit:focus{
+  background-color: transparent;
+  border-color: #7BED0A;
+  color: #7BED0A;
+}

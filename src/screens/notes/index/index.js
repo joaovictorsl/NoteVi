@@ -9,7 +9,7 @@ const IndexNotes = () => {
 
   return (
     <Fragment>
-      <Header setIsOpen={setIsOpen} />
+      <Header setIsOpen={setIsOpen} display={true} itemToGoPage='/users/edit' itemName='Options' />
       <Notes setIsOpen={setIsOpen} isOpen={isOpen} />
     </Fragment>
   )

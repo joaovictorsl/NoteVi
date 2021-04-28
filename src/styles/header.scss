@@ -19,6 +19,9 @@ nav{
   margin-top: 10px;
   cursor: pointer;
 }
+.dontdisplay{
+  display: none !important;
+}
 
 @media (min-width: 1024px){
   .inandup{

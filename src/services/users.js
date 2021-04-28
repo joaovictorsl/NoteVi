@@ -10,6 +10,31 @@ const UserService = {
   logout: () => {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
+  },
+  updateToken: () => {
+
+  },
+  delete: async (id) => {
+    Api.delete(`/users/delete/${id}`, { headers: { 'x-access-token': localStorage.getItem('token') } })
+  },
+  updateName: async (params) => {
+    Api.put(`/users/edit/name`, params, { headers: { 'x-access-token': localStorage.getItem('token') } });
+    let user = JSON.parse(localStorage.getItem('user'))
+    user = { ...user, name: params.name }
+    localStorage.setItem('user', JSON.stringify(user))
+  },
+  updateEmail: async (params) => {
+    let response = await Api.put(`/users/edit/email`, params, { headers: { 'x-access-token': localStorage.getItem('token') } });
+    let user = JSON.parse(localStorage.getItem('user'))
+    user = { ...user, email: params.email }
+    localStorage.setItem('user', JSON.stringify(user))
+    localStorage.setItem('token', response.data.token);
+  },
+  updatePassword: async (params) => {
+    const response = await Api.put(`/users/edit/password`, params, { headers: { 'x-access-token': localStorage.getItem('token') } });
+    let user = JSON.parse(localStorage.getItem('user'))
+    user = { ...user, password: response.data.user.password }
+    localStorage.setItem('user', JSON.stringify(user))
   }
 }
 

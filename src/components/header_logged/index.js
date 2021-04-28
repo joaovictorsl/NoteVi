@@ -19,6 +19,8 @@ const Header = (props) => {
 
   const [redirect, setRedirect] = useState(false)
 
+  const [display, setDisplay] = useState(props.display)
+
   const handleLogOut = async () => {
     await UserService.logout();
     setRedirect(true)
@@ -29,6 +31,7 @@ const Header = (props) => {
     return <Redirect to={{ pathname: '/' }} />
   }
 
+  let classdisplay = display ? null : 'dontdisplay'
 
   return (
     <Fragment>
@@ -36,7 +39,7 @@ const Header = (props) => {
         <section className='sectionheader'>
           <div className='iconandbrand'>
             <Link to='/notes'><span className='notevi'>NoteVi</span></Link>
-            <div onClick={() => props.setIsOpen(true)}>
+            <div onClick={() => props.setIsOpen(true)} className={classdisplay}>
               <FontAwesomeIcon icon={faBars} size='2x' className='list-color' />
             </div>
           </div>
@@ -45,8 +48,8 @@ const Header = (props) => {
           </div>
           <div className='inandup'>
             <div>
-              <Link to='/users/edit'>
-                <span className="signin">Options</span>
+              <Link to={props.itemToGoPage}>
+                <span className="signin">{props.itemName}</span>
               </Link>
             </div>
             <div>
